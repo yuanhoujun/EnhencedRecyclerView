@@ -13,11 +13,16 @@ public abstract class BaseRefreshView extends RelativeLayout {
 
 
     public BaseRefreshView(Context context) {
-        super(context);
+        this(context , null);
     }
 
     public BaseRefreshView(Context context, AttributeSet attrs) {
         super(context, attrs);
+        init(context);
+    }
+
+    private void init(Context context) {
+
     }
 
     public abstract void onRefresh(PullIndictor indictor);
